@@ -1,14 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <AppNav />
+
+    <router-view />
   </div>
 </template>
+<script>
+import AppNav from '@/components/AppNav.vue';
+
+export default {
+  components: {
+    AppNav,
+  },
+};
+</script>
 
 <style lang="scss">
+body {
+  margin: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
